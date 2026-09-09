@@ -54,6 +54,7 @@ const projects = [
       "An AI-focused developer platform project designed to showcase intelligent development workflows and modern web technologies.",
     tags: ["React.js", "Node.js", "AI", "JavaScript"],
     icon: "bi-robot",
+    link:"/",
     featured: true,
   },
   {
@@ -63,14 +64,25 @@ const projects = [
       "AI chatbot application using external APIs to provide context-aware and dynamic responses through a responsive interface.",
     tags: ["React.js", "API", "JavaScript", "AI"],
     icon: "bi-chat-dots",
+    link:"/"
   },
   {
     number: "03",
-    title: "Personal Portfolio",
+    title: "Wanderlust",
+    description: "An Airbnb clone",
+    tags: ["html", "css", "Node.js", "JavaScript", "Rest APIs", "MongoDB"],
+    icon: "bi-house-heart",
+    link: "https://wanderlust-project-g6nc.onrender.com",
+    featured: true,
+  },
+  {
+    number: "04",
+    title: "Railway Backup Management System",
     description:
-      "Responsive personal portfolio website built to showcase projects, technical skills, experience and contact information.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    icon: "bi-window-stack",
+      "A web-based backup management system developed during my internship at East Coast Railway for managing server instances, scheduling backups, monitoring reports, and controlling user access.",
+    tags: ["HTML", "CSS", "Bootstrap", "SQL", "JavaScript"],
+    icon: "bi-database-check",
+    link: "https://github.com/adarsharr/backup-management-system.git",
   },
 ];
 
@@ -391,7 +403,10 @@ function App() {
 
           <div className="projects-grid">
             {projects.map((project) => (
-              <article
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={
                   project.featured
                     ? "project-card featured"
@@ -415,10 +430,10 @@ function App() {
                   ))}
                 </div>
 
-                <button className="project-arrow">
+                <span className="project-arrow">
                   <i className="bi bi-arrow-up-right"></i>
-                </button>
-              </article>
+                </span>
+              </a>
             ))}
           </div>
         </section>
