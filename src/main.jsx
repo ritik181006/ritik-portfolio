@@ -8,7 +8,7 @@ const profile = {
   location: "Bhubaneswar, Odisha",
   email: "ritikdas378@gmail.com",
   phone: "+91 9861552046",
-  github: "https://github.com/ritik181006lin",
+  github: "https://github.com/ritik181006",
   linkedin: "https://www.linkedin.com/in/ritik-das-81b612320/",
   leetcode: "https://leetcode.com/u/ritikkumardas/",
 };
